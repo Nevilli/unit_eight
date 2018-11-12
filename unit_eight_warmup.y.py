@@ -3,6 +3,13 @@ import tkinter
 root = tkinter.Tk()
 root.title("Temperature Converter")
 
+
+def f_to_c():
+    fahrenheit = int(f_value.get())
+    celsius = 5 / 9 * (fahrenheit - 32)
+    c_value.set(str(celsius))
+
+
 f_value = tkinter.StringVar()
 c_value = tkinter.StringVar()
 
@@ -17,5 +24,8 @@ C_label.grid(row=2, column=1)
 
 C_label_entry = tkinter.Label(root, textvariable=c_value)
 C_label_entry.grid(row=2, column=2)
+
+convert_button = tkinter.Button(root, text="Convert", command=f_to_c)
+convert_button.grid(row=3, column=1)
 
 root.mainloop()
