@@ -58,97 +58,116 @@ def zero_zero():
     answer = entry.get()
     entry.set(answer + "00")
 
+
 def division():
     answer = entry.get()
-    entry.set(answer )
+    entry.set(answer + "/")
 
-def one():
-    answer = entry.get()
-    entry.set(answer + "1")
 
-def one():
+def times():
     answer = entry.get()
-    entry.set(answer + "1")
+    entry.set(answer + "*")
 
-def one():
-    answer = entry.get()
-    entry.set(answer + "1")
 
-def one():
+def minus():
     answer = entry.get()
-    entry.set(answer + "1")
+    entry.set(answer + "-")
 
-def one():
+
+def plus():
     answer = entry.get()
-    entry.set(answer + "1")
+    entry.set(answer + "+")
+
+
+def squared():
+    answer = entry.get()
+    entry.set(str(float(answer) ** 2))
+
+
+def percent():
+    answer = entry.get()
+    entry.set(str(float(answer) / 100))
+
+
+def equals():
+    entry.set(eval(entry.get()))
+
+
+def clear():
+    entry.set("")
+
+
+def decimal():
+    answer = entry.get()
+    entry.set(answer + ".")
 
 
 entry = tkinter.StringVar()
 
-title = tkinter.Label(root, text="Liam's Special Calculator")
+title = tkinter.Label(root, text="Liam's Special Calculator", fg="Blue")
 title.grid(row=1, column=1, columnspan=5)
 
 main_entry = tkinter.Entry(root, textvariable=entry)
 main_entry.grid(row=2, column=1, columnspan=5)
 
-clear = tkinter.Button(root, text="C")
+clear = tkinter.Button(root, text="C", command=clear, fg="Blue")
 clear.grid(row=3, column=1)
 
-seven = tkinter.Button(root, text="7", command=seven)
+seven = tkinter.Button(root, text="7", command=seven, fg="Blue")
 seven.grid(row=3, column=2)
 
-eight = tkinter.Button(root, text="8", command=eight)
+eight = tkinter.Button(root, text="8", command=eight, fg="Blue")
 eight.grid(row=3, column=3)
 
-nine = tkinter.Button(root, text="9", command=nine)
+nine = tkinter.Button(root, text="9", command=nine, fg="Blue")
 nine.grid(row=3, column=4)
 
-division = tkinter.Button(root, text="/")
+division = tkinter.Button(root, text="/", command=division, fg="Blue")
 division.grid(row=3, column=5)
 
-squared = tkinter.Button(root, text="x2")
+squared = tkinter.Button(root, text="x2", command=squared, fg="Blue")
 squared.grid(row=4, column=1)
 
-four = tkinter.Button(root, text="4", command=four)
+four = tkinter.Button(root, text="4", command=four, fg="Blue")
 four.grid(row=4, column=2)
 
-five = tkinter.Button(root, text="5", command=five)
+five = tkinter.Button(root, text="5", command=five, fg="Blue")
 five.grid(row=4, column=3)
 
-six = tkinter.Button(root, text="6", command=six)
+six = tkinter.Button(root, text="6", command=six, fg="Blue")
 six.grid(row=4, column=4)
 
-times = tkinter.Button(root, text="x")
+times = tkinter.Button(root, text="x", command=times, fg="Blue")
 times.grid(row=4, column=5)
 
-percent = tkinter.Button(root, text="%")
+percent = tkinter.Button(root, text="%", command=percent, fg="Blue")
 percent.grid(row=5, column=1)
 
-one = tkinter.Button(root, text="1", command=one)
+one = tkinter.Button(root, text="1", command=one, fg="Blue")
 one.grid(row=5, column=2)
 
-two = tkinter.Button(root, text="2", command=two)
+two = tkinter.Button(root, text="2", command=two, fg="Blue")
 two.grid(row=5, column=3)
 
-three = tkinter.Button(root, text="3", command=three)
+three = tkinter.Button(root, text="3", command=three, fg="Blue")
 three.grid(row=5, column=4)
 
-minus = tkinter.Button(root, text="-")
+minus = tkinter.Button(root, text="-", command=minus, fg="Blue")
 minus.grid(row=5, column=5)
 
-zero_zero = tkinter.Button(root, text="00", command = zero_zero)
+zero_zero = tkinter.Button(root, text="00", command=zero_zero, fg="Blue")
 zero_zero.grid(row=6, column=1)
 
-zero = tkinter.Button(root, text="0", command= zero)
+zero = tkinter.Button(root, text="0", command=zero, fg="Blue")
 zero.grid(row=6, column=2)
 
-decimal = tkinter.Button(root, text=".")
+decimal = tkinter.Button(root, text=".", command=decimal, fg="Blue")
 decimal.grid(row=6, column=3)
 
-equals = tkinter.Button(root, text="=")
+equals = tkinter.Button(root, text="=", command=equals, fg="Blue")
 equals.grid(row=6, column=4)
 
-plus = tkinter.Button(root, text="+")
+plus = tkinter.Button(root, text="+", command=plus, fg="Blue")
 plus.grid(row=6, column=5)
 
 root.mainloop()
