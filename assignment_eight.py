@@ -1,3 +1,8 @@
+# Liam Neville
+# 11/14/18
+# This program allows the user to use a simple mathematics calculator
+
+
 import tkinter
 
 root = tkinter.Tk()
@@ -5,99 +10,179 @@ root.title("Liam's Special Calculator")
 
 
 def one():
+    """
+    adds one to the entry field
+    :return: none
+    """
     answer = entry.get()
     entry.set(answer + "1")
 
 
 def two():
+    """
+    adds two to the entry field
+    :return: none
+    """
     answer = entry.get()
     entry.set(answer + "2")
 
 
 def three():
+    """
+        adds three to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "3")
 
 
 def four():
+    """
+        adds four to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "4")
 
 
 def five():
+    """
+        adds five to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "5")
 
 
 def six():
+    """
+        adds six to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "6")
 
 
 def seven():
+    """
+        adds seven to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "7")
 
 
 def eight():
+    """
+    adds eight to the entry field
+    :return: none
+    """
     answer = entry.get()
     entry.set(answer + "8")
 
 
 def nine():
+    """
+    adds nine to the entry field
+    :return: none
+    """
     answer = entry.get()
     entry.set(answer + "9")
 
 
 def zero():
+    """
+    adds zero to the entry field
+    :return: none
+    """
     answer = entry.get()
     entry.set(answer + "0")
 
 
 def zero_zero():
+    """
+        adds double zero to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "00")
 
 
 def division():
+    """
+        adds division sign to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "/")
 
 
 def times():
+    """
+        adds multiplication sign to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "*")
 
 
 def minus():
+    """
+        adds minus sign to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "-")
 
 
 def plus():
+    """
+        adds plus sign to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + "+")
 
 
 def squared():
+    """
+        adds squared sign to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(str(float(answer) ** 2))
 
 
 def percent():
+    """
+        adds percent sign to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(str(float(answer) / 100))
 
 
 def equals():
+    """
+    calculates whatever is in the entry field
+    :return:
+    """
     entry.set(eval(entry.get()))
 
 
 def clear():
+    """
+        clears the entry field
+        :return: none
+    """
     entry.set("")
 
 
 def decimal():
+    """
+        adds decimal point to the entry field
+        :return: none
+    """
     answer = entry.get()
     entry.set(answer + ".")
 
